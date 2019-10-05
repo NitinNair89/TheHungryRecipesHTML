@@ -12,6 +12,13 @@ $(document).ready(function(){
         fetchMeal('l');
     });
 
+    // Fetch searched recipe
+    $('.btnSearchRecipe').on('click', function(){
+        fetchMeal('u');
+    })
+
+    //also this could be easily refactored, maybe open issue for this too
+
     // Fetch content after 3s
     setTimeout(function(){
         fetchMeal('r');
