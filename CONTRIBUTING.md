@@ -12,4 +12,4 @@ Accepted contributions:
 3. Submit a pull request mentioning the issue it will fix
 
 ## License
-By contributing, you agree that your contributions will be licensed under its MIT License.
+By contributing, you agree that your contributions will be licensed under its GPL License.
