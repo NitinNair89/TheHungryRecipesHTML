@@ -10,3 +10,9 @@ A food recipes website with clean user interface powered by TheMealDB free API
 Link: https://nitinnair89.github.io/TheHungryRecipes/
 
 TheMealDB: https://www.themealdb.com/
+
+---
+
+**Tech stack:**
+
+HTML5, Skeleton CSS Library (http://getskeleton.com/), JavaScript
