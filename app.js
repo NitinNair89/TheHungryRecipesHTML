@@ -138,12 +138,14 @@ const createMealCards = meals => {
     let mealCards = '';
 
     meals.forEach(meal => {
+        mealData = JSON.stringify(meal);
+        mealData = mealData.replace(/(['])/g, "&rsquo;");
         mealCards += 
         `<div class="four columns"><div class="card">
             <img src="${meal.strMealThumb}" alt="${meal.strMeal}" title="${meal.strMeal}" class="u-max-full-width" />
             <div class="card-body">
                 <div class="cardTitle">${meal.strMeal}</div>
-                <button class="button mealCardRecipeBtn" data-meal='${JSON.stringify(meal)}'>Recipe</button>
+                <button class="button mealCardRecipeBtn" data-meal='${mealData}'>Recipe</button>
             </div>
         </div></div>`;
     });
