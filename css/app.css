@@ -15,10 +15,6 @@ body {
 
 
 /* Nav */
-.navbar .columns {
-	height: 33px
-}
-
 .navbar-list {
 	list-style: none;
 	margin-bottom: 0;
@@ -27,7 +23,8 @@ body {
 }
 
 .navbar {
-	padding: 10px 0;
+	position: fixed;
+	padding: 7px;
 	display: flex;
 	justify-content: space-evenly;
 	width: 100%;
@@ -299,7 +296,7 @@ a {
 }
 
 .brand {
-	font-size: 2rem;
+	font-size: 5vw;
 	font-weight: bold
 }
 
@@ -317,8 +314,12 @@ main {
 }
 
 
-@media (max-width: 530px) {
+@media (min-width: 440px) {
 	.brand {
-  		font-size: 5vw;
-  }
+  		font-size: 3vw;
+  	}
+
+	.navbar-link {
+		font-size: 1.5vw;
+	}
 }
