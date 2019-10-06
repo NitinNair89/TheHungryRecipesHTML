@@ -20,10 +20,7 @@ $(document).ready(function(){
     //also this could be easily refactored, maybe open issue for this too
 
     // Fetch content after 3s
-    setTimeout(function(){
-        fetchMeal('r');
-        fetchMeal('l');
-    },1000);
+    setTimeout(getData(['u', 'r', 'l']), 1000);
 });
 
 // Get recipe list based on search input
@@ -53,6 +50,7 @@ function fetchMeal(type){
         .then( res => res.json() )
         .then( res => {
             createMeal(res.meals[0], type);
+            setCache(res.meals[0], type);
         })
         .catch( e => console.warn(e) );
     } else {
@@ -61,10 +59,34 @@ function fetchMeal(type){
         .then( res => {
             createMealCards(res.meals);           
             window.scrollTo(0,$('#mealCardsSection').offset().top);
+            $('#userInput').text($.trim($('#searchRecipe').val()));
+            setCache(res.meals, type);
         })
         .catch( e => console.warn(e) );
     }
-    $('#userInput').text($.trim($('#searchRecipe').val()));
+}
+
+//Function to save the data in the cache
+const setCache = (meal, type) => {
+    let mealJson = JSON.stringify(meal);
+    localStorage.setItem(type, mealJson);
+    if( type === 'u' ) localStorage.setItem("search", $.trim($('#searchRecipe').val()));
+}
+
+//Function to get cache data if it exists, otherwise, fetch from the API
+const getData = (types) => {
+    types.forEach(type => {
+        let mealData = JSON.parse(localStorage.getItem(type));
+        if ( mealData !== null ) {
+            if ( type === 'u' ) {
+                createMealCards(mealData);           
+                window.scrollTo(0,$('#mealCardsSection').offset().top);
+                $('#userInput').text(localStorage.getItem("search"));
+            }
+            else createMeal(mealData, type);
+        }
+        else { if ( type !== 'u' ) fetchMeal(type); }
+    })
 }
 
 // Function to generate the random meal UI component
