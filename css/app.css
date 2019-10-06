@@ -60,8 +60,7 @@ section#mealCardsSection .back{top:0}
 section#landing{display:flex;flex-direction:row;align-items:center;height:100vh}
 section#landing > .container{margin-top:-100px}
 section{height:auto}
-section#landing .chefimg{top:31px;right:-10px}
-section#landing .btnSearchRecipe{margin-top: 10px;}
+section#landing .chefimg{top:-20px;right:-3px}
 section#random .chefimg{top:5px;right:-14px}
 section#mealCardsSection .chefimg{top:-20px;right:22px}
 
