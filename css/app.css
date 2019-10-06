@@ -14,6 +14,41 @@ body {
 }
 
 
+/* Nav */
+.navbar .columns {
+	height: 33px
+}
+
+.navbar-list {
+	list-style: none;
+	margin-bottom: 0;
+	display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar {
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	background: whitesmoke;
+	z-index: 99;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee
+}
+.navbar-item {
+	position: relative;
+	display: inline
+}
+.navbar-link {
+	text-transform: uppercase;
+	font-size: 2vw;
+	font-weight: 600;
+	letter-spacing: .2rem;
+	text-decoration: none;
+	color: black
+}
+
 /* CSS Loader #11 by Nitin - https://codepen.io/Nitin-Chandran-Nair/full/jmQgWW */
 .loader {
 	margin: 0 auto;
@@ -89,8 +124,9 @@ body {
 /* Back to top */
 .back {
 	text-align: right;
-	position: relative;
-	right: 20px
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
 }
 
 section#landing .back,section#random .back,section#latest .back {
@@ -218,20 +254,6 @@ section#mealCardsSection .back {
 }
 
 
-/* Nav */
-.navbar {
-	padding: 10px 0
-}
-
-.navbar .columns {
-	height: 33px
-}
-
-.navbar .nine.columns {
-	padding-top: 4px
-}
-
-
 /* Section */
 section#landing {
 	display: flex;
@@ -295,40 +317,8 @@ main {
 }
 
 
-/* Media queries */
-@media (min-width: 750px) {
-	.navbar {
-		display: block;
-		width: 100%;
-		background: whitesmoke;
-		z-index: 99;
-		border-top: 1px solid #eee;
-		border-bottom: 1px solid #eee
-	}
-}
-
-@media (min-width: 750px) {
-	.navbar-list {
-		list-style: none;
-		margin-bottom: 0
-	}
-}
-
-@media (min-width: 750px) {
-	.navbar-item {
-		position: relative;
-		display: inline
-	}
-}
-
-@media (min-width: 750px) {
-	.navbar-link {
-		text-transform: uppercase;
-		font-size: 11px;
-		font-weight: 600;
-		letter-spacing: .2rem;
-		margin-right: 35px;
-		text-decoration: none;
-		color: black
-	}
+@media (max-width: 530px) {
+	.brand {
+  		font-size: 5vw;
+  }
 }
