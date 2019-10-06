@@ -1,6 +1,6 @@
 $(document).ready(function(){
     // Fetches random recipe
-    $('button.btnRandomRecipe').on('click', function(){
+    $('.btnRandomRecipe').on('click', function(){
         fetchMeal('r');
 
         // Textual updates
