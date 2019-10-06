@@ -1,13 +1,13 @@
-*{
+* {
 	box-sizing: border-box
 }
 
-html,body{
+html,body {
 	height: 100%;
 	scroll-behavior: smooth
 }
 
-body{
+body {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap
@@ -33,8 +33,7 @@ body{
 	100% {
 		outline-color: white;
 		outline-width: 7px
-	} 
-
+	}
 }
 
 @-webkit-keyframes shine {
@@ -44,8 +43,7 @@ body{
 	100% {
 		outline-color: white;
 		outline-width: 7px
-	} 
-
+	}
 }
 
 @-moz-keyframes shine {
@@ -55,8 +53,7 @@ body{
 	100% {
 		outline-color: white;
 		outline-width: 7px
-	} 
-
+	}
 }
 
 @-o-keyframes shine {
@@ -66,46 +63,45 @@ body{
 	100% {
 		outline-color: white;
 		outline-width: 7px
-	} 
-
+	}
 }
 
 
 /* Theme color */
-body{
+body {
 	background-color: whitesmoke;
 	color: black
 }
 
-.brand,.heading{
+.brand,.heading {
 	color: #689f38
 }
 
-.button: hover{
+.button: hover {
 	background-color: #689f38
 }
 
-.loader{
+.loader {
 	outline: 0 solid #689f38
 }
 
 
 /* Back to top */
-.back{
+.back {
 	text-align: right;
 	position: relative;
 	right: 20px
 }
 
-section#landing .back,section#random .back,section#latest .back{
+section#landing .back,section#random .back,section#latest .back {
 	top: -60px
 }
 
-section#mealCardsSection .back{
+section#mealCardsSection .back {
 	top: 0
 }
 
-.back img{
+.back img {
 	height: 40px;
 	width: 40px;
 	transform: rotate(180deg);
@@ -115,51 +111,51 @@ section#mealCardsSection .back{
 }
 
 /* Button */
-.button{
+.button {
 	font-weight: bold;
 	font-size: 13px;
 	border: 1px solid black
 }
 
-.button: hover{
+.button: hover {
 	transition: all 500ms ease;
 	color: white
 }
 
-.button,.card{
+.button,.card {
 	box-shadow: 2px 6px 15px rgba(0,0,0,0.1)
 }
 
 /* Cards */
-.card{
+.card {
 	border-radius: 7px;
 	margin: 10px
 }
 
-.card img{
+.card img {
 	width: 100%;
 	max-height: 150px
 }
 
-.card-body{
+.card-body {
 	padding: 5px 15px
 }
 
-.cardTitle{
+.cardTitle {
 	margin-bottom: 5px
 }
 
-.mealCards{
+.mealCards {
 	text-align: center
 }
 
-.mealCards .columns{
+.mealCards .columns {
 	margin-left: 0
 }
 
 
 /* Chef icon */
-.chefimg{
+.chefimg {
 	position: absolute;
 	height: 39px;
 	width: 39px;
@@ -171,7 +167,7 @@ section#mealCardsSection .back{
 
 
 /* Flex */
-.d-flex{
+.d-flex {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -181,7 +177,7 @@ section#mealCardsSection .back{
 
 
 /* Heading */
-.heading{
+.heading {
 	text-transform: uppercase;
 	font-size: 40px;
 	font-weight: bold;
@@ -196,25 +192,25 @@ section#mealCardsSection .back{
 
 
 /* Ingredients */
-.mealMetadata ul > li{
+.mealMetadata ul > li {
 	margin: 0;
 	float: left;
 	width: 50%
 }
 
-.mealMetadata ul{
+.mealMetadata ul {
 	margin-bottom: 0
 }
 
 
 /* Meal */
-.mealMetadata span,.mealInstructions span{
+.mealMetadata span,.mealInstructions span {
 	margin-right: 20px;
 	font-weight: bold;
 	text-transform: uppercase
 }
 
-.mealImg > img{
+.mealImg > img {
 	height: 100%;
 	width: 100%;
 	border-radius: 100%;
@@ -223,85 +219,84 @@ section#mealCardsSection .back{
 
 
 /* Nav */
-.navbar{
+.navbar {
 	padding: 10px 0
 }
 
-.navbar .columns{
+.navbar .columns {
 	height: 33px
 }
 
-.navbar .nine.columns{
+.navbar .nine.columns {
 	padding-top: 4px
 }
 
 
 /* Section */
-section#landing{
+section#landing {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	height: 100vh
 }
 
-section#landing > .container{
+section#landing > .container {
 	margin-top: -100px
 }
 
-section{
+section {
 	height: auto
 }
 
-section#landing .chefimg{
+section#landing .chefimg {
 	top: -20px;
 	right: -3px
 }
 
-section#random .chefimg{
+section#random .chefimg {
 	top: 5px;
 	right: -14px
 }
 
-section#mealCardsSection .chefimg{
+section#mealCardsSection .chefimg {
 	top: -20px;
 	right: 22px
 }
 
 
 /* Footer */
-footer{
+footer {
 	bottom: 0;
 	text-align: center
 }
 
 
 /* Others */
-a{
+a {
 	cursor: pointer
 }
 
-.brand{
+.brand {
 	font-size: 2rem;
 	font-weight: bold
 }
 
-.brand: hover,.brand: visited,.brand: focus{
+.brand: hover,.brand: visited,.brand: focus {
 	color: black
 }
 
-main{
+main {
 	justify-content: center;
 	align-items: center
 }
 
-#userInput{
+#userInput {
 	font-weight: bold
 }
 
 
 /* Media queries */
 @media (min-width: 750px) {
-
 	.navbar {
 		display: block;
 		width: 100%;
@@ -310,32 +305,23 @@ main{
 		border-top: 1px solid #eee;
 		border-bottom: 1px solid #eee
 	}
-
-
 }
 
 @media (min-width: 750px) {
-
 	.navbar-list {
 		list-style: none;
 		margin-bottom: 0
 	}
-
-
 }
 
 @media (min-width: 750px) {
-
 	.navbar-item {
 		position: relative;
 		display: inline
 	}
-
-
 }
 
-@media (min-width: 750px){
-
+@media (min-width: 750px) {
 	.navbar-link {
 		text-transform: uppercase;
 		font-size: 11px;
@@ -345,6 +331,4 @@ main{
 		text-decoration: none;
 		color: black
 	}
-
-
 }
