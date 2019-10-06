@@ -20,7 +20,7 @@ $(document).ready(function(){
     //also this could be easily refactored, maybe open issue for this too
 
     // Fetch content after 3s
-    setTimeout(getData(['u', 'r', 'l']), 1000);
+    setTimeout(getData(['u', 'r']), 1000);
 });
 
 // Get recipe list based on search input
