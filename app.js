@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    // Uses the fetch() API to request category recipes from TheMealsDB.com API
     fetch('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
     .then(res => res.json())
     .then(res => {
