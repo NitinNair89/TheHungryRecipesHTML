@@ -1,4 +1,18 @@
 $(document).ready(function(){
+    fetch('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
+    .then(res => res.json())
+    .then(res => {
+        res.meals.forEach(meal => {
+            let listCategory = ''
+            listCategory += `
+                <li class="navbar-item">
+                <a onclick="fetchCategoryMeal('${meal.strCategory}')"
+                    class="navbar-link" tabindex="0" href="#mealCardsSection">${meal.strCategory}</a>
+                </li>`;
+            NavBarCategory.innerHTML += listCategory;
+        });
+    })
+
     // Fetches random recipe
     $('button.btnRandomRecipe').on('click', function(){
         fetchMeal('r');
@@ -65,6 +79,17 @@ function fetchMeal(type){
         .catch( e => console.warn(e) );
     }
     $('#userInput').text($.trim($('#searchRecipe').val()));
+}
+
+function fetchCategoryMeal(category){
+    fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=' + category)
+        .then(res => res.json())
+        .then(res => {
+            createMealCards(res.meals);
+            window.scrollTo(0, $('#mealCardsSection').offset().top);
+        })
+    .catch(e => console.warn(e));
+    $('#userInput').text(category);
 }
 
 // Function to generate the random meal UI component
