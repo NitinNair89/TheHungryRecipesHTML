@@ -50,11 +50,23 @@ $(document).keypress(function(e) {
 
 // Show recipe of clicked meal
 $(document).on('click','.mealCardRecipeBtn',function(){
-    const meal = $(this).data('meal');
-    window.scrollTo(0,$('#random').offset().top);
-    createMeal(meal,'r');
-    // Textual updates
-    $('#dynamicTitle').text(meal.strMeal);
+    let meal = $(this).data('meal');
+    if(meal.strCategory === undefined){
+        fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i='+meal.idMeal)
+        .then( res => res.json() )
+        .then( res => {
+            meal = res.meals[0];
+            window.scrollTo(0,$('#random').offset().top);
+            createMeal(meal,'r');
+            // Textual updates
+            $('#dynamicTitle').text(meal.strMeal);
+        })
+    } else {
+        window.scrollTo(0,$('#random').offset().top);
+        createMeal(meal,'r');
+        // Textual updates
+        $('#dynamicTitle').text(meal.strMeal);
+    }
 });
 
 // Uses the fetch() API to request random meal recipe from TheMealsDB.com API
