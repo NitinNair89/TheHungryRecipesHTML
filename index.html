@@ -24,8 +24,8 @@
                       </div>
                       <div class="four columns">
                         <ul class="navbar-list">
-                          <li class="navbar-item"><a class="navbar-link btnLatestRecipe" tabindex="0" href="#latest" title="Show latest recipes">Latest</a></li>
-                          <li class="navbar-item"><a class="navbar-link btnRandomRecipe" tabindex="0" href="#random" title="Show a random recipe">Random</a></li>                       
+                          <li class="navbar-item"><a class="navbar-link btnLatestRecipe" tabindex="0" href="#latest" title="Show latest recipes" onclick="document.getElementById('searchRecipe').value = '' ">Latest</a></li>
+                          <li class="navbar-item"><a class="navbar-link btnRandomRecipe" tabindex="0" href="#random" title="Show a random recipe" onclick="document.getElementById('searchRecipe').value = '' ">Random</a></li>                       
                           <li class="navbar-item"><a class="navbar-link" tabindex="0" href="#about">About</a></li>
                         </ul>
                       </div>
@@ -51,7 +51,7 @@
                           </div>
                           <div class="four columns">
                               <img src="images/chef.svg" class="u-max-full-width chefimg" />
-                              <a class="button btnRandomRecipe" href="#random" title="Show a random recipe">Random Recipe</a>
+                              <a class="button btnRandomRecipe" href="#random" title="Show a random recipe" onclick="document.getElementById('searchRecipe').value = '' ">Random Recipe</a>
                           </div>
                         </div>
                         
