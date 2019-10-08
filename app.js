@@ -8,7 +8,7 @@ $(document).ready(function(){
             listCategory += `
                 <li class="navbar-item">
                 <a onclick="fetchCategoryMeal('${meal.strCategory}')"
-                    class="navbar-link" tabindex="0" href="#mealCardsSection">${meal.strCategory}</a>
+                    class="navbar-link-category" tabindex="0" href="#mealCardsSection">${meal.strCategory}</a>
                 </li>`;
             NavBarCategory.innerHTML += listCategory;
         });
