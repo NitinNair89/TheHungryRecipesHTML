@@ -16,24 +16,18 @@
 <body>
   <main role="main" id="main">
       <header>
-          <nav class="navbar">
-              <div class="container">
-                <div class="row">
-                    <div class="eight columns">
-                        <a class="brand" tabindex="0" title="The Hungry Recipes">The Hungry Recipes</a>
-                      </div>
-                      <div class="four columns">
-                        <ul class="navbar-list">
-                          <li class="navbar-item"><a class="navbar-link btnLatestRecipe" tabindex="0" href="#latest" title="Show latest recipes">Latest</a></li>
-                          <li class="navbar-item"><a class="navbar-link btnRandomRecipe" tabindex="0" href="#random" title="Show a random recipe">Random</a></li>                       
-                          <li class="navbar-item"><a class="navbar-link" tabindex="0" href="#about">About</a></li>
-                        </ul>
-                      </div>
-                </div>
-              </div>
-            </nav>
-      </header>
-      
+      <nav class="navbar">
+        <a class="columns brand" tabindex="0" title="The Hungry Recipes">The Hungry Recipes</a>
+        <ul class="columns navbar-list">
+          <li class="navbar-item"><a class="navbar-link btnLatestRecipe" tabindex="0" href="#latest" title="Show latest recipes">Latest</a></li>
+          <li class="navbar-item"><a class="navbar-link btnRandomRecipe" tabindex="0" href="#random" title="Show a random recipe">Random</a></li>
+          <li class="navbar-item"><a class="navbar-link" tabindex="0" href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="back"><a href="#main" tabindex="-1"><img src="images/scroll.svg" title="Back to top" /></a></div>
+
       <section id="landing">
           <div class="container">
               <div class="row">
@@ -100,7 +94,7 @@
             <div class="row mealCards d-flex"><div class="loader"></div></div>
           </div>
       </section>
-      <div class="back"><a href="#main" tabindex="-1"><img src="images/scroll.svg" title="Back to top" /></a></div>
+      
   
       <section id="random">
         <br/>
@@ -126,7 +120,7 @@
           </div>
         </div>
       </section>
-      <div class="back"><a href="#main" tabindex="-1"><img src="images/scroll.svg" title="Back to top" /></a></div>
+      
   
       <section id="latest">
         <br/>
@@ -146,7 +140,7 @@
             
         </div>
       </section>
-      <div class="back"><a href="#main" tabindex="-1"><img src="images/scroll.svg" title="Back to top" /></a></div>
+      
 
       <section id="about">
         <div class="container">
