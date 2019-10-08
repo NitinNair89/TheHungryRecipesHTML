@@ -40,6 +40,10 @@ section#mealCardsSection .back{top:0}
 /*  Flex */
 .d-flex{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:middle}
 
+/*Random Recipe button alignment - Bhaveshm23 */
+#landing .row:first-child{display: flex; align-items: center;} 
+section#landing .row .chefimg{top:26px; left:160px; position: relative;}
+
 /* Heading */
 .heading{text-transform:uppercase;font-size:40px;font-weight:bold;font-family:'Roboto Slab', serif;transform:rotate(-5deg);-webkit-transform:rotate(-5deg);-moz-transform:rotate(-5deg);-o-transform:rotate(-5deg);text-align:center;margin-bottom:0}
 
