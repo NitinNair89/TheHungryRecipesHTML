@@ -25,134 +25,123 @@
         </ul>
       </nav>
     </header>
+    
     <div class="back"><a href="#main" tabindex="-1"><img src="images/scroll.svg" title="Back to top" /></a></div>
-      <section id="landing">
-          <div class="container">
-              <div class="row">
-                  <div class="twelve columns">
-                    <div class="row d-flex">
-                      <div class="four columns" style="align-self:center;">
-                        <h1 class="heading">The Hungry Recipes</h1>
-                      </div>
-                      <div class="eight columns">
-                        <h4>Confused what to cook? <br/>
-                          <small>Search a recipe or try a random recipe!</small>
-                        </h4>
-                        <div class="row">
-                          <div class="eight columns">
-                            <input class="u-full-width" type="text" placeholder="Search recipes" id="searchRecipe" />
-                          </div>
-                          <div class="four columns" style="position:relative;" id="randomMealBtnContainer">
-                              <img src="images/chef.svg" class="u-max-full-width chefimg" />
-                              <a class="button btnRandomRecipe" href="#random" title="Show a random recipe">Random Recipe</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-          </div>
-      </section>
 
-      <section id="mealCardsSection" style="display:none;">
-        <br/>
-        <div class="container">
-            <div class="row">
-                <div class="four columns">
-                  <h3 class="heading">The Recipes You Wanted</h3> <br/>
-                </div>
-                <div class="row">
-                  <div class="eight columns">
-                    <div class="row">
-                      <div class="eight columns" style="text-align:center;font-size:20px">
-                        <p>You searched for: <span id="userInput"></span></p>
-                      </div>
-                      <div class="four columns" style="text-align:right">
-                        <img src="images/chef.svg" class="u-max-full-width chefimg" alt="Chef icon" />
-                        <a href="#landing" class="button">Search again?</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="row mealCards d-flex"><div class="loader"></div></div>
+    <section id="landing">
+      <div class="row twelve columns row d-flex">
+        <div class="four columns" style="align-self:center;">
+          <h1 class="heading">The Hungry Recipes</h1>
+        </div>
+        <div class="eight columns">
+          <h4>Confused what to cook? <br/>
+            <small>Search a recipe or try a random recipe!</small>
+          </h4>
+          <div class="eight columns">
+            <input class="u-full-width" type="text" placeholder="Search recipes" id="searchRecipe" />
           </div>
-      </section>
-  
-      <section id="random">
-        <br/>
-        <div class="container">
-          <div class="row">
-              <div class="four columns">
-                <h3 class="heading" id="dynamicTitle">The Random Recipe</h3> <br/>
-              </div>
-              <div class="eight columns" style="text-align:right;">
-                <br/>
-                <a id="searchAgainBtn" class="button btnRandomRecipe" href="#landing" title="Searh again" style="margin-right:10px">Search again</a>
-
-                <img src="images/chef.svg" class="u-max-full-width chefimg" alt="Chef icon" />
-                <button id="dynamicButton" class="button btnRandomRecipe" title="Show another random recipe">Randomize</button>
-              </div> 
-          </div>
-          <div class="row">
-            <div class="four columns mealImg" id="randomMealImg"><div class="loader"></div></div>
-            <div class="eight columns mealMetadata" id=randomMealMetadata></div>
-          </div>
-          <div class="row">
-            <div class="twelve columns mealInstructions" id="randomMealInstructions"></div>
+          <div id="randomMealBtnContainer">
+            <a class="button btnRandomRecipe" href="#random" title="Show a random recipe">Random Recipe</a>
+            <img src="images/chef.svg" class="u-max-full-width chefimg" />
           </div>
         </div>
-      </section>
-  
-      <section id="latest">
-        <br/>
-        <div class="container">
-            <div class="row">
-              <div class="four columns">
-                <h3 class="heading">The Latest Recipe</h3> <br/>
-              </div>
-            </div>
-            <div class="row">
-              <div class="four columns mealImg" id="latestMealImg"><div class="loader"></div></div>
-              <div class="eight columns mealMetadata" id=latestMealMetadata></div>
-            </div>
-            <div class="row">
-              <div class="twelve columns mealInstructions" id="latestMealInstructions"></div>
-            </div>
-            
-        </div>
-      </section>
-
-      <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="twelve columns">
-                  <div class="row d-flex">
-                    <div class="four columns" style="align-self:center;">
-                      <h1 class="heading">About The Hungry Recipes</h1>
-                    </div>
-                    <div class="eight columns">
-                      <p>
-                        "The Hungry Recipes" is powered by the free API provided by 
-                        <a href="https://www.themealdb.com/" target="_blank" title="TheMealDB.com">TheMealDB</a>, 
-                        an open source database of recipes from around the world.
-                      </p>
-                      <p>
-                        This web application uses HTML for structure, CSS for styles and JavaScript for dynamic content.
-                        <br/>Developed and maintained by Nitin - <a href="https://github.com/NitinNair89" target="_Blank" title="Nitin's GitHub profile">@nitinnair89</a>
-                        <br/>Github repo - <a href="https://github.com/NitinNair89/TheHungryRecipes" title="The Hungry Recipes on Github" target="_blank">https://github.com/NitinNair89/TheHungryRecipes</a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </div>
+      </div>
     </section>
-    <footer>
-        <div>
-          Icons by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> and <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> <br/>
-          from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+
+    <section id="mealCardsSection" style="display:none;">
+      <br/>
+      <div class="container">
+        <div class="row">
+          <div class="four columns">
+            <h3 class="heading">The Recipes You Wanted</h3> <br/>
+          </div>
+          <div class="row">
+            <div class="eight columns">
+              <div class="row">
+                <div class="eight columns" style="text-align:center;font-size:20px">
+                  <p>You searched for: <span id="userInput"></span></p>
+                </div>
+                <div class="four columns" style="text-align:right">
+                  <img src="images/chef.svg" class="u-max-full-width chefimg" alt="Chef icon" />
+                  <a href="#landing" class="button">Search again?</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="row mealCards d-flex"><div class="loader"></div></div>
+      </div>
+    </section>
+
+    <section id="random">
+      <br/>
+      <div class="container">
+        <div class="row">
+          <div class="four columns">
+            <h3 class="heading" id="dynamicTitle">The Random Recipe</h3> <br/>
+          </div>
+          <div class="eight columns" style="text-align:right;">
+            <br/>
+            <a id="searchAgainBtn" class="button btnRandomRecipe" href="#landing" title="Searh again" style="margin-right:10px">Search again</a>
+            <button id="dynamicButton" class="button btnRandomRecipe" title="Show another random recipe">Randomize</button>
+            <img src="images/chef.svg" class="u-max-full-width chefimg" alt="Chef icon" />
+          </div> 
+        </div>
+        <div class="row">
+          <div class="four columns mealImg" id="randomMealImg"><div class="loader"></div></div>
+          <div class="eight columns mealMetadata" id=randomMealMetadata></div>
+        </div>
+        <div class="row">
+          <div class="twelve columns mealInstructions" id="randomMealInstructions"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="latest">
+      <div class="container">
+        <div class="row">
+          <div class="four columns">
+            <h3 class="heading">The Latest Recipe</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="four columns mealImg" id="latestMealImg"><div class="loader"></div></div>
+          <div class="eight columns mealMetadata" id=latestMealMetadata></div>
+        </div>
+        <div class="row">
+          <div class="twelve columns mealInstructions" id="latestMealInstructions"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="d-flex">
+          <div class="four columns" style="align-self:center;margin:20px">
+            <p class="heading">About The Hungry Recipes</p>
+          </div>
+          <div class="eight columns">
+            <p>
+              "The Hungry Recipes" is powered by the free API provided by 
+              <a href="https://www.themealdb.com/" target="_blank" title="TheMealDB.com">TheMealDB</a>, 
+              an open source database of recipes from around the world.
+            </p>
+            <p>
+              This web application uses HTML for structure, CSS for styles and JavaScript for dynamic content.
+              <br/>Developed and maintained by Nitin - <a href="https://github.com/NitinNair89" target="_Blank" title="Nitin's GitHub profile">@nitinnair89</a>
+              <br/>Github repo - <a href="https://github.com/NitinNair89/TheHungryRecipes" title="The Hungry Recipes on Github" target="_blank">https://github.com/NitinNair89/TheHungryRecipes</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        Icons by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> and <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> <br/>
+        from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+      </div>
     </footer>
   </main>
 </body>

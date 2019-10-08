@@ -31,7 +31,7 @@ section#mealCardsSection .back{top:0}
 .cardTitle{margin-bottom:5px}
 .mealCards{text-align:center}
 .mealCards .columns{margin-left:0}
-.chefimg{position:absolute;height:39px;width:39px;transform:rotate(32deg);-webkit-transform:rotate(32deg);-moz-transform:rotate(32deg);-o-transform:rotate(32deg)}
+.chefimg{height:39px;width:39px;transform:rotate(32deg);-webkit-transform:rotate(32deg);-moz-transform:rotate(32deg);-o-transform:rotate(32deg)}
 .d-flex{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:middle}
 .heading{text-transform:uppercase;font-size:40px;font-weight:700;font-family:'Roboto Slab',serif;transform:rotate(-5deg);-webkit-transform:rotate(-5deg);-moz-transform:rotate(-5deg);-o-transform:rotate(-5deg);text-align:center;margin-bottom:0}
 .mealMetadata ul>li{margin:0;float:left;width:50%}
@@ -40,7 +40,7 @@ section#mealCardsSection .back{top:0}
 .mealImg>img{height:100%;width:100%;border-radius:100%;box-shadow:0 5px 15px rgba(0,0,0,.2)}
 section#landing{display:flex;flex-direction:row;align-items:center;height:100vh}
 section#landing>.container{margin-top:-100px}
-section{height:auto}
+section{height:80vh}
 section#landing .chefimg{top:-20px;right:-3px}
 section#random .chefimg{top:5px;right:-14px}
 section#mealCardsSection .chefimg{top:-20px;right:22px}
@@ -50,5 +50,9 @@ a{cursor:pointer}
 .brand: focus,.brand: hover,.brand: visited{color:#000}
 main{justify-content:center;align-items:center}
 #userInput{font-weight:700}
-@media (min-width:440px){.brand{font-size:3vw}
+@media (min-width:440px){
+.brand{font-size:3vw}
 .navbar-link{font-size:1.5vw}}
+@media (max-width:800px){
+.heading{margin:20px;width:80vw}
+}
