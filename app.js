@@ -1,4 +1,19 @@
 $(document).ready(function(){
+    // Uses the fetch() API to request category recipes from TheMealsDB.com API
+    fetch('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
+    .then(res => res.json())
+    .then(res => {
+        res.meals.forEach(meal => {
+            let listCategory = ''
+            listCategory += `
+                <li class="navbar-item">
+                <a onclick="fetchCategoryMeal('${meal.strCategory}')"
+                    class="navbar-link" tabindex="0" href="#mealCardsSection">${meal.strCategory}</a>
+                </li>`;
+            NavBarCategory.innerHTML += listCategory;
+        });
+    })
+
     // Fetches random recipe
     $('.btnRandomRecipe').on('click', function(){
         fetchMeal('r');
@@ -35,11 +50,23 @@ $(document).keypress(function(e) {
 
 // Show recipe of clicked meal
 $(document).on('click','.mealCardRecipeBtn',function(){
-    const meal = $(this).data('meal');
-    window.scrollTo(0,$('#random').offset().top);
-    createMeal(meal,'r');
-    // Textual updates
-    $('#dynamicTitle').text(meal.strMeal);
+    let meal = $(this).data('meal');
+    if(meal.strCategory === undefined){
+        fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i='+meal.idMeal)
+        .then( res => res.json() )
+        .then( res => {
+            meal = res.meals[0];
+            window.scrollTo(0,$('#random').offset().top);
+            createMeal(meal,'r');
+            // Textual updates
+            $('#dynamicTitle').text(meal.strMeal);
+        })
+    } else {
+        window.scrollTo(0,$('#random').offset().top);
+        createMeal(meal,'r');
+        // Textual updates
+        $('#dynamicTitle').text(meal.strMeal);
+    }
 });
 
 // Uses the fetch() API to request random meal recipe from TheMealsDB.com API
@@ -65,6 +92,17 @@ function fetchMeal(type){
         .catch( e => console.warn(e) );
     }
     $('#userInput').text($.trim($('#searchRecipe').val()));
+}
+
+function fetchCategoryMeal(category){
+    fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=' + category)
+        .then(res => res.json())
+        .then(res => {
+            createMealCards(res.meals);
+            window.scrollTo(0, $('#mealCardsSection').offset().top);
+        })
+    .catch(e => console.warn(e));
+    $('#userInput').text(category);
 }
 
 // Function to generate the random meal UI component
