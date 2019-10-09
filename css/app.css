@@ -94,3 +94,21 @@ main{justify-content:center;align-items:center}
 @media (min-width: 750px){
     .navbar-link-category {text-transform: uppercase;font-size: 10px;font-weight: 600;letter-spacing: .2rem;margin-right: 10px;text-decoration: none;color:black}
 }
+
+
+#navList{list-style:none;margin-bottom:0;display:flex;justify-content:space-evenly}
+#navBar{position:fixed;padding:7px;display:flex;justify-content:space-evenly;width:100%;background:#f5f5f5;z-index:99;border-top:1px solid #eee;border-bottom:1px solid #eee}
+#navItem{position:relative;display:inline}
+#navLink{text-transform:uppercase;font-size:2vw;font-weight:600;letter-spacing:.2rem;text-decoration:none;color:#000}
+.button: hover{background-color:#689f38}
+.back{text-align:right;position:fixed;right:20px;bottom:20px}
+.button: hover{transition:all .5s ease;color:#fff}
+.chefimg{height:39px;width:39px;transform:rotate(32deg);-webkit-transform:rotate(32deg);-moz-transform:rotate(32deg);-o-transform:rotate(32deg)}
+#about-section{height:80vh}
+.brand{font-size:5vw;font-weight:700}
+.brand: focus,.brand: hover,.brand: visited{color:#000}
+@media (min-width:440px){
+.brand{font-size:3vw}
+.navbar-link{font-size:1.5vw}}
+@media (max-width:800px){
+.heading{margin:20px;width:80vw}}
