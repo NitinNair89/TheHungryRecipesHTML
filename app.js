@@ -35,10 +35,7 @@ $(document).ready(function(){
     //also this could be easily refactored, maybe open issue for this too
 
     // Fetch content after 3s
-    setTimeout(function(){
-        fetchMeal('r');
-        fetchMeal('l');
-    },1000);
+    setTimeout(getData(['u', 'r']), 1000);
 });
 
 // Get recipe list based on search input
@@ -80,6 +77,7 @@ function fetchMeal(type){
         .then( res => res.json() )
         .then( res => {
             createMeal(res.meals[0], type);
+            setCache(res.meals[0], type);
         })
         .catch( e => console.warn(e) );
     } else {
@@ -88,10 +86,61 @@ function fetchMeal(type){
         .then( res => {
             createMealCards(res.meals);           
             window.scrollTo(0,$('#mealCardsSection').offset().top);
+            $('#userInput').text($.trim($('#searchRecipe').val()));
+            setCache(res.meals, type);
         })
         .catch( e => console.warn(e) );
     }
-    $('#userInput').text($.trim($('#searchRecipe').val()));
+}
+
+// Function to save the data in the cache
+const setCache = (meal, type) => {
+    let mealJson = JSON.stringify(meal);
+    if( type === 'u' ){
+        sessionStorage.setItem("search", $.trim($('#searchRecipe').val()));
+        sessionStorage.setItem(type, mealJson);
+    } else setCookie(type, mealJson);
+
+}
+
+// Function to set the cookie
+const setCookie = (key, value, exDays = 3) => {
+    let date = new Date();
+    date.setTime(date.getTime() + exDays*24*60*60*1000);
+    document.cookie = key + "=" + value + "; expires=" + date.toUTCString() + ";path=/";
+}
+
+// Function to get cookie
+const getCookie = (key) => {
+    key = key + "=";
+    var cookies = document.cookie.split(';');
+    for(var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i];
+      while (cookie.charAt(0) == ' ') cookie = cookie.substring(1);
+      if (cookie.indexOf(key) == 0) { return cookie.substring(key.length, cookie.length) };
+    }
+    return null;
+}
+
+// Function to get cache data if it exists, otherwise, fetch from the API
+const getData = (types) => {
+    types.forEach(type => {
+        if( type === "u" ) {
+            let mealData = JSON.parse(sessionStorage.getItem(type));
+            if( mealData !== null ) {
+                createMealCards(mealData);           
+                window.scrollTo(0,$('#mealCardsSection').offset().top);
+                $('#userInput').text(sessionStorage.getItem("search"));
+            }
+        }
+        else {
+            let mealData = null;
+            try {
+                mealData = JSON.parse(getCookie(type));
+            } catch (error) { console.warn(error) };
+            mealData !== null ? createMeal(mealData, type) : fetchMeal(type);
+        }
+    })
 }
 
 function fetchCategoryMeal(category){
