@@ -182,8 +182,13 @@ const createMeal = (meal,type) => {
     }
 
     // Set YouTube link
-    if ( meal.strSource ) {
-        mealMetadata +=`<span>YouTube:</span> <a href='${meal.strSource}' target="_blank" title="Watch how to cook ${meal.strMeal}">${meal.strSource}</a><br/>`
+    if ( meal.strYoutube ) {
+        mealMetadata +=`<span>YouTube:</span> <a href='${meal.strYoutube}' target="_blank" title="Watch how to cook ${meal.strMeal}">${meal.strYoutube}</a><br/>`
+    }
+
+     // Set Source link
+     if ( meal.strSource ) {
+        mealMetadata +=`<span>Source:</span> <a href='${meal.strSource}' target="_blank" title="Watch how to cook ${meal.strMeal}">${meal.strSource}</a><br/>`
     }
 
     // Fill ingredients
