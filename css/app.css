@@ -112,7 +112,7 @@ main{justify-content:center;align-items:center}
 .brand{font-size:5vw;font-weight:700}
 .brand: focus,.brand: hover,.brand: visited{color:#000}
 @media (min-width:440px){
-.brand{font-size:3vw}
-.navbar-link{font-size:1.5vw}}
+.brand{font-size:30px}
+.navbar-link{font-size:20px}}
 @media (max-width:800px){
 .heading{margin:20px;width:80vw}}
