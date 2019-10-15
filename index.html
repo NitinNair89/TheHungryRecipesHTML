@@ -16,16 +16,25 @@
 <body>
   <main role="main" id="main">
       <header>
-      <nav id="navBar">
-        <a class="columns brand" tabindex="0" title="The Hungry Recipes">The Hungry Recipes</a>
-        <ul id="navList" class="columns">
-          <li class="navbar-item"><a id="navLink" class=" btnRandomRecipe" tabindex="0" href="#random" title="Show a random recipe">Random</a></li>
-          <li class="navbar-item"><a id="navLink" tabindex="0" href="#about">About</a></li>
-        </ul>
-      </nav>
-    </header>
+          <nav class="navbar">
+              <div class="container">
+                <div class="row">
+                    <div class="eight columns">
+                        <a class="brand" tabindex="0" title="The Hungry Recipes">The Hungry Recipes</a>
+                      </div>
+                      <div class="four columns">
+                        <ul class="navbar-list">
+                          <li class="navbar-item"><a class="navbar-link btnRandomRecipe" tabindex="0" href="#random" title="Show a random recipe" onclick="clear()">Random</a></li>                       
+                          <li class="navbar-item"><a class="navbar-link" tabindex="0" href="#about">About</a></li>
+                        </ul>
+                      </div>
+                </div>
+              </div>
+            </nav>
+      </header>
+      
+<div class="back"><a href="#main" tabindex="-1"><img src="images/scroll.svg" title="Back to top" /></a></div>
 
-    <div class="back"><a href="#main" tabindex="-1"><img src="images/scroll.svg" title="Back to top" /></a></div>
 
       <section id="landing">
           <div class="container">
@@ -44,7 +53,7 @@
                           </div>
                           <div class="four columns">
                               <img src="images/chef.svg" class="u-max-full-width chefimg" />
-                              <a class="button btnRandomRecipe" href="#random" title="Show a random recipe">Random Recipe</a>
+                              <a class="button btnRandomRecipe" href="#random" title="Show a random recipe" onclick="clear()">Random Recipe</a>
                           </div>
                         </div>
                         
