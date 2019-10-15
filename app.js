@@ -22,11 +22,6 @@ $(document).ready(function(){
         $('#dynamicTitle').text('The Random Recipe');
     });
 
-    // Fetch latest recipe
-    $('.btnLatestRecipe').on('click', function(){
-        fetchMeal('l');
-    });
-
     // Fetch searched recipe
     $('.btnSearchRecipe').on('click', function(){
         fetchMeal('u');
@@ -74,9 +69,8 @@ document.getElementById('searchRecipe').value = '' ;
 function fetchMeal(type){
     let url = '';
     if ( type === 'r') { url = 'https://www.themealdb.com/api/json/v1/1/random.php'; }
-    else if ( type === 'l' ) { url = 'https://www.themealdb.com/api/json/v1/1/latest.php'; }
 
-    if ( type === 'r' || type === 'l' ) {
+    if ( type === 'r' ) {
         fetch(url)
         .then( res => res.json() )
         .then( res => {
@@ -210,9 +204,6 @@ const createMeal = (meal,type) => {
     if ( type === 'r') { 
         $('#randomMealMetadata').html(mealMetadata); 
         $('#randomMealInstructions').html(mealInstr); 
-    } else if ( type === 'l') { 
-        $('#latestMealMetadata').html(mealMetadata); 
-        $('#latestMealInstructions').html(mealInstr); 
     }
 }
 
@@ -220,7 +211,6 @@ const createMeal = (meal,type) => {
 const setMealThumbnail = (meal,type) => {
     let imgSrc = `<img src="${meal.strMealThumb}" alt="${meal.strMeal}" title="${meal.strMeal}" />`;
     if ( type === 'r') { $('#randomMealImg').html(imgSrc); }
-    else if ( type === 'l') { $('#latestMealImg').html(imgSrc); }
 }
 
 // Gets ingredients of the random meal

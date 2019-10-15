@@ -104,7 +104,7 @@ main{justify-content:center;align-items:center}
 .back{text-align:right;position:fixed;right:20px;bottom:20px}
 .button: hover{transition:all .5s ease;color:#fff}
 .chefimg{height:39px;width:39px;transform:rotate(32deg);-webkit-transform:rotate(32deg);-moz-transform:rotate(32deg);-o-transform:rotate(32deg)}
-#about-section{height:80vh}
+#about-section{height:80vh;padding-top:20vh;}
 .brand{font-size:5vw;font-weight:700}
 .brand: focus,.brand: hover,.brand: visited{color:#000}
 @media (min-width:440px){
