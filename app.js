@@ -61,9 +61,10 @@ $(document).on('click','.mealCardRecipeBtn',function(){
     }
 });
 
-function clear(){
-document.getElementById('searchRecipe').value = '' ;
-}
+// Clear search box on button press
+$(document).on('click','.clear-field',function(){
+    document.getElementById('searchRecipe').value = '';
+});
 
 // Uses the fetch() API to request random meal recipe from TheMealsDB.com API
 function fetchMeal(type){
