@@ -6,6 +6,7 @@
   <meta name="description" content="The Hungry Recipes app let's you browse recipes provided by TheMealDB API">
   <meta name="author" content="Nitin Chandran Nair">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
@@ -13,6 +14,29 @@
   <link rel="stylesheet" href="css/app.css">
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
+<style>
+@media (max-width: 1000px) {
+   .brand {
+     float: 50px;
+     margin: auto 10px;
+   }
+
+   .heading {
+     float: 50px;
+     margin: auto 10px;
+   }
+}
+
+@media (max-width: 600px) {
+      .brand {
+        visibility: hidden;
+      }
+
+      .heading {
+        margin-top: 50px;
+      }
+ }
+ </style>
 <body>
   <main role="main" id="main">
       <header>
@@ -24,7 +48,7 @@
                       </div>
                       <div class="four columns">
                         <ul class="navbar-list">
-                          <li class="navbar-item"><a class="navbar-link btnRandomRecipe clear-field" tabindex="0" href="#random" title="Show a random recipe">Random</a></li>                       
+                          <li class="navbar-item"><a class="navbar-link btnRandomRecipe clear-field" tabindex="0" href="#random" title="Show a random recipe">Random</a></li>
                           <li class="navbar-item"><a class="navbar-link" tabindex="0" href="#about">About</a></li>
                         </ul>
                       </div>
@@ -32,7 +56,7 @@
               </div>
             </nav>
       </header>
-      
+
 <div class="back"><a href="#main" tabindex="-1"><img src="images/scroll.svg" title="Back to top" /></a></div>
 
 
@@ -56,7 +80,7 @@
                               <a class="button btnRandomRecipe" href="#random" title="Show a random recipe" onclick="clear()">Random Recipe</a>
                           </div>
                         </div>
-                        
+
                         <div class="row">
                           <div class="eight columns">
                             <input class="u-full-width" type="text" placeholder="Search recipes" id="searchRecipe" />
@@ -102,7 +126,7 @@
             <div class="row mealCards d-flex"><div class="loader"></div></div>
           </div>
       </section>
-      
+
       <section id="random">
         <br/>
         <div class="container">
@@ -116,7 +140,7 @@
 
                 <img src="images/chef.svg" class="u-max-full-width chefimg" alt="Chef icon" />
                 <button id="dynamicButton" class="button btnRandomRecipe" title="Show another random recipe">Randomize</button>
-              </div> 
+              </div>
           </div>
           <div class="row">
             <div class="four columns mealImg" id="randomMealImg"><div class="loader"></div></div>
@@ -127,7 +151,7 @@
           </div>
         </div>
       </section>
-      
+
       <section id="about-section">
         <div class="container">
             <div class="row">
@@ -138,8 +162,8 @@
                     </div>
                     <div class="eight columns">
                       <p>
-                        "The Hungry Recipes" is powered by the free API provided by 
-                        <a href="https://www.themealdb.com/" target="_blank" title="TheMealDB.com">TheMealDB</a>, 
+                        "The Hungry Recipes" is powered by the free API provided by
+                        <a href="https://www.themealdb.com/" target="_blank" title="TheMealDB.com">TheMealDB</a>,
                         an open source database of recipes from around the world.
                       </p>
                       <p>
@@ -163,5 +187,7 @@
   </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="app.js"></script>
 </html>
