@@ -99,6 +99,11 @@ function fetchMeal(type){
     }
 }
 
+// remove error message
+$(document).on('click','#errorMessageBtn',function(){
+    $("#errorMessageContainer").remove();
+});
+
 // Function to save the data in the cache
 const setCache = (meal, type) => {
     let mealJson = JSON.stringify(meal);
