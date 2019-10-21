@@ -11,7 +11,7 @@ body{display:flex;flex-direction:column;flex-wrap:nowrap}
 
 /* Theme color */
 body{background-color:whitesmoke;color:black}
-.brand,.heading{color:#3c7530; }
+.brand,.heading{color:#689f38; }
 .button:hover{background-color:#689f38}
 .loader{outline: 0 solid #689f38}
 
