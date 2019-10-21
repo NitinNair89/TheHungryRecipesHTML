@@ -10,7 +10,7 @@ body{display:flex;flex-direction:column;flex-wrap:nowrap}
 @-o-keyframes shine { 50% {outline-width: 7px} 100% {outline-color: white;outline-width: 7px} }
 
 /* Theme color */
-body{background-color:#d5dfb8;color:black}
+body{background-color:whitesmoke;color:black}
 .brand,.heading{color:#3c7530; }
 .button:hover{background-color:#689f38}
 .loader{outline: 0 solid #689f38}
@@ -27,7 +27,7 @@ section#mealCardsSection .back{top:0}
 .button,.card{box-shadow: 2px 6px 15px rgba(0,0,0,0.1)}
 
 /* Cards */
-.card{border-radius:7px;margin:10px; background-color: rgba(255, 255, 255, 1);}
+.card{border-radius:7px;margin:10px}
 .card img{width:100%;max-height:150px}
 .card-body{padding:5px 15px}
 .cardTitle{margin-bottom:5px}
@@ -80,7 +80,7 @@ main{justify-content:center;align-items:center}
 
 /* Media queries */
 @media (min-width: 750px) {
-    .navbar {display: block;width: 100%;background:#e6e6e6;z-index: 99;border-top: 1px solid #eee;border-bottom: 1px solid #eee}
+     .navbar {display: block;width: 100%;background:whitesmoke;z-index: 99;border-top: 1px solid #eee;border-bottom: 1px solid #eee; position: fixed;}
 }
 @media (min-width: 750px) {
     .navbar-list {list-style:none;margin-bottom: 0}
@@ -97,7 +97,7 @@ main{justify-content:center;align-items:center}
 
 
 #navList{list-style:none;margin-bottom:0;display:flex;justify-content:space-evenly}
-#navBar{position:fixed;padding:45px;display:flex;justify-content:space-evenly;width:100%;background:#d0dac4;z-index:99;border-top:1px solid #eee;border-bottom:1px solid #eee}
+#navBar{position:fixed;padding:7px;display:flex;justify-content:space-evenly;width:100%;background:#f5f5f5;z-index:99;border-top:1px solid #eee;border-bottom:1px solid #eee}
 #navItem{position:relative;display:inline}
 #navLink{text-transform:uppercase;font-size:2vw;font-weight:600;letter-spacing:.2rem;text-decoration:none;color:#000}
 .button: hover{background-color:#689f38}
