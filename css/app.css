@@ -79,9 +79,10 @@ main{justify-content:center;align-items:center}
 #userInput{font-weight:bold}
 
 /* Media queries */
-@media (min-width: 750px) {
+@media (min-width: 500px) {
      .navbar { padding: 40px; display: block;width: 100%;background:whitesmoke;z-index: 99;border-top: 1px solid #eee;border-bottom: 5px solid #eee; position: fixed;}
-}
+     
+    }
 @media (min-width: 750px) {
     .navbar-list {list-style:none;margin-bottom: 0}
 }
