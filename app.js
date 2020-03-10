@@ -83,14 +83,26 @@ function fetchMeal(type){
         fetch('https://www.themealdb.com/api/json/v1/1/search.php?s='+$.trim($('#searchRecipe').val()))
         .then( res => res.json() )
         .then( res => {
-            createMealCards(res.meals);           
-            window.scrollTo(0,$('#mealCardsSection').offset().top);
-            $('#userInput').text($.trim($('#searchRecipe').val()));
-            setCache(res.meals, type);
+            let user_search_term = $.trim($('#searchRecipe').val());
+            if (res.meals) {
+                $("#errorMessageContainer").remove();
+                createMealCards(res.meals);           
+                window.scrollTo(0,$('#mealCardsSection').offset().top);
+                $('#userInput').text(user_search_term);
+                setCache(res.meals, type);
+            } else {
+                $("#mealCardsSection .container").hide();
+                $("#mealCardsSection").prepend("<div id='errorMessageContainer' style='display:flex;'> <p id='errorMessageText'>No recipes match the search term '" + user_search_term + "'</p> <a id='errorMessageBtn' class='button' href='#landing' title='Search again' >Search again</a> </div>")
+            }   
         })
         .catch( e => console.warn(e) );
     }
 }
+
+// remove error message
+$(document).on('click','#errorMessageBtn',function(){
+    $("#errorMessageContainer").remove();
+});
 
 // Function to save the data in the cache
 const setCache = (meal, type) => {
@@ -127,7 +139,7 @@ const getData = (types) => {
         if( type === "u" ) {
             let mealData = JSON.parse(sessionStorage.getItem(type));
             if( mealData !== null ) {
-                createMealCards(mealData);           
+                createMealCards(mealData);      
                 window.scrollTo(0,$('#mealCardsSection').offset().top);
                 $('#userInput').text(sessionStorage.getItem("search"));
             }
@@ -244,5 +256,5 @@ const createMealCards = meals => {
         </div></div>`;
     });
     $('.mealCards').html(mealCards);
-    $('#mealCardsSection').show();
+    $('#mealCardsSection .container').show();
 }

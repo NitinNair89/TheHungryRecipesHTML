@@ -112,3 +112,6 @@ main{justify-content:center;align-items:center}
 .navbar-link{font-size:1.5vw}}
 @media (max-width:800px){
 .heading{margin:20px;width:80vw}}
+#errorMessageContainer{display: none; background: #679f38; text-align: center;height: 100px; color: white; justify-content: center; align-items: center;}
+#errorMessageText{line-height: 100px; padding: 0px; margin: 0 40px 0 0;}
+#errorMessageBtn{margin: 0px; color: white; border: 1px solid white;}
