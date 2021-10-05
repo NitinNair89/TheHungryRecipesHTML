@@ -7,7 +7,7 @@ A food recipes website with clean user interface powered by TheMealDB free API
 [![GitHub forks](https://img.shields.io/github/forks/NitinNair89/TheHungryRecipes)](https://github.com/NitinNair89/TheHungryRecipes/network) &nbsp;
 [![GitHub contributors](https://img.shields.io/github/contributors/NitinNair89/TheHungryRecipes)](https://github.com/NitinNair89/TheHungryRecipes/graphs/contributors)
 
-Link: https://nitinnair89.github.io/TheHungryRecipes/
+Link: https://nitinnair89.github.io/TheHungryRecipesHTML/
 
 TheMealDB: https://www.themealdb.com/
 
